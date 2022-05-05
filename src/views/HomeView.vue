@@ -1,5 +1,18 @@
 <script setup lang="ts">
-import TheWelcome from "@/components/TheWelcome.vue";
+import { useCheckList } from "@/composable/useCheckList";
+import { useCustomDialog } from "@/composable/useCustomDialog";
+
+const { CheckList, isAllChecked } = useCheckList(["apple", "orange", "grape"]);
+const { CustomDialog, openDialog, isOpen } = useCustomDialog();
 </script>
 
-<template>aaa</template>
+<template>
+  <CheckList />
+
+  <p>allChecked: {{ isAllChecked }}</p>
+
+  <hr />
+
+  <button @click="openDialog">open Dialog</button>
+  <CustomDialog title="bbb" />
+</template>

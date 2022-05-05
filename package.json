@@ -1,5 +1,5 @@
 {
-  "name": "vue-use-modal",
+  "name": "demo-vue-composition-component",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

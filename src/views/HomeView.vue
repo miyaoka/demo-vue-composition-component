@@ -7,12 +7,18 @@ const { CustomDialog, openDialog, isOpen } = useCustomDialog();
 </script>
 
 <template>
-  <CheckList />
+  <section>
+    <h2>checklist</h2>
+    <div>
+      <CheckList />
+    </div>
+    <p>allChecked: {{ isAllChecked }}</p>
+  </section>
 
-  <p>allChecked: {{ isAllChecked }}</p>
-
-  <hr />
-
-  <button @click="openDialog">open Dialog</button>
-  <CustomDialog title="bbb" />
+  <section>
+    <h2>dialog</h2>
+    <p>isOpen: {{ isOpen }}</p>
+    <button @click="openDialog">open Dialog</button>
+    <CustomDialog title="bbb" />
+  </section>
 </template>
